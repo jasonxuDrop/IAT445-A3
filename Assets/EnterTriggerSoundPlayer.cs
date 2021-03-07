@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class EnterTriggerSoundPlayer : MonoBehaviour
 {
+	private void Start() {
+		DontDestroyOnLoad(this.gameObject);
+	}
 	private void OnTriggerEnter(Collider other) {
 		GetComponent<AudioSource>().Play();
 	}
